@@ -1,21 +1,12 @@
 ## Paper reading assignment
 ## 1. ENTSUM: A Data Set for Entity-Centric Summarization (ACL, 2022)
 
- ### Overview:  
-The paper introduced a human-annotated data set (ENTSUM) for controllable summarization with a focus on named entities as the aspects to control. 
-Along with existing methods the also proposed extensions to state-of-the-art summarization approaches that achieve substantially better results on the data set. <br>
-### Main Contribution: <br>  
-                     1. The first annotated data set for controllable summarization with entities as targets for control (ENTSUM - Entity SUMmarization)
-                     2. Evaluation of generic and also controllable summarization methods on the ENTSUM data set.
-                     3. Adaptations of extractive and abstractive summarization methods for performing entity-centric summarization when trained with generic summaries only. <br>
-     
-### Methods:  <br>
-Abstractive methods: ConvNet (Fan et al. 2018), CTRLSum (He et al., 2020), GSum (Dou et al., 2021), Adapting GSum for Entity-Centric Summarization. <br>
-Extractive methods: Lead3ovr and Lead3ent (Nallapati et al., 2017), BERTSum (Liu and Lapata, 2019), Adapting BERTSum for Entity-Centric Summarization, Oracle - Lead3ent (salient), Oracle - Lead3ent (summary) <br>
-
-### Results:<br>
-          - Methods that do not take entity information into account (Lead3ovr, GSumovr) perform significantly lower than the best methods in the same class which use entity information. <br>
-          - Previously introduced methods (ConvNet, CTRLSum) for controllable summarization can not perform well on entity-centric summarization. <br>
-          - Extractive approaches perform better than abstractive methods, which is expected due to the extractive nature of the ENTSUM data set. <br>
+| Overview  | The paper introduced a human-annotated data set (ENTSUM) for controllable summarization with a focus on named entities as the aspects to control. Along with existing methods the also proposed extensions to state-of-the-art summarization approaches that achieve substantially better results on the data set. |
+| --- | --- |
+| Key Related Work  | 1. Deep Learning for Efficient Discriminative Parsing (Collobert, 2011) -> Proposed new NLP algorithm by using CNN with GTN for constituency parsing.|
+|                   | 2. Trainsition-based Dependency Parsing Using Recursive Neural Networks (Stenetorp, 2013) -> Introduce new framework to use RvNNs for trainsition-based dependency parsing.|
+|                   | 3. Natural Language Processing (almost) from Scratch (Collobert et al., 2009) -> Introduce new architecture and learning algorithm that can applied to many NLP tasks (e.g. POS, NER).
+| Solution  | Combining POS tags and arc labels with words instead of discrete representation. Using Cube activation function. Use pre-computational technique to pre-compute top frequent words, all POS tags and arc labels|
+| Results  | Accruacy improves around 2% in UAS and LAS scores. Improve parsing speed by 8 ~ 10 times. |
 
 ***Reference: Maddela, M., Kulkarni, M., & Preotiuc-Pietro, D. (2022). EntSUM: A Data Set for Entity-Centric Summarization. arXiv preprint arXiv:2204.02213.
