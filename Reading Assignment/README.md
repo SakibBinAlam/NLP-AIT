@@ -1,7 +1,6 @@
 ## Paper reading assignment
 ## 1. ENTSUM: A Data Set for Entity-Centric Summarization (ACL, 2022)
 
-| --- | --- |
 | Overview  | The paper introduced a human-annotated data set (ENTSUM) for controllable summarization with a focus on named entities as the aspects to control. Along      with existing methods the also proposed extensions to state-of-the-art summarization approaches that achieve substantially better results on the data set. |
 | --- | --- |
 | Main Contributions  | 1.The first annotated data set for controllable summarization with entities as targets for control (ENTSUM - Entity SUMmarization).|
