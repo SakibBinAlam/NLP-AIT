@@ -1,6 +1,5 @@
 ## Paper reading assignment
 ## 1. ENTSUM: A Data Set for Entity-Centric Summarization (ACL, 2022)
-### Author Ashwin Devaraj, William Sheffield, Byron C. Wallace, Junyi Jessy Li
 
  ### Overview:  
 The paper introduced a human-annotated data set (ENTSUM) for controllable summarization with a focus on named entities as the aspects to control. 
