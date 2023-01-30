@@ -13,5 +13,4 @@
 |          | -Extractive approaches perform better than abstractive methods, which is expected due to the extractive nature of the ENTSUM data set. |
 | Research gap/future directions  | -The absolute results also show there is further room for improvement in entity-centric summarization approaches, given that performance of automated methods still lags behind Lead3ent, whereas this is currently surpassed by automated methods in generic summarization. . |
 |                                 | -A data set for entity-centric summarization can be created that is more abstractive in nature. |
-
 | Reference  | Maddela, M., Kulkarni, M., & Preotiuc-Pietro, D. (2022). EntSUM: A Data Set for Entity-Centric Summarization. arXiv preprint arXiv:2204.02213. |
