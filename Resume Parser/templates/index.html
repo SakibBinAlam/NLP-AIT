@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Resume Parser</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Resume Parser </h1>
+</div>
+
+<div id="homepage-form">
+    <h4>Please upload your resume in pdf format</h4>
+    <form action="/uploadResume" method="POST" enctype="multipart/form-data">
+        <input type="file" id="File" name="File" accept=".pdf">
+        <button type="submit" class="btn btn-secondary">Parse</button>
+    </form>
+    
+</div>
+{% endblock %}
