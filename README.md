@@ -1,5 +1,5 @@
 ## NLP-AIT
-I will upload my assignments in this repository for the NLP course at AIT (Jan 2023 semester).
+I will upload my lab assignments and class works in this repository for the NLP course at AIT (Jan 2023 semester). I will also upload the summary of papers.
 
 ### Summary for the Glove paper:
 This study presents a new approach to dependency parsing that combines the efficiency of a transition-based parser with the accuracy of a graph-based parser. The key findings of the paper include:
