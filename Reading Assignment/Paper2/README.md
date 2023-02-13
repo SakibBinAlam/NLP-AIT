@@ -1,5 +1,6 @@
 ## 2. Graph Enhanced Contrastive Learning for Radiology Findings Summarization
 
+| Overview  | The paper introduced a human-annotated data set (ENTSUM) for controllable summarization with a focus on named entities as the aspects to control. Along      with existing methods the also proposed extensions to state-of-the-art summarization approaches that achieve substantially better results on the data set. |
 | --- | --- |
 | Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary.|
                     
