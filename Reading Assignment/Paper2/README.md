@@ -2,8 +2,13 @@
 
 | Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary. |
 | --- | --- |                  
-| Methods used for evaluation  | Abstractive methods: ConvNet (Fan et al. 2018), CTRLSum (He et al., 2020), GSum (Dou et al., 2021), Adapting GSum for Entity-Centric Summarization.|
-|                              | Extractive methods: Lead3ovr and Lead3ent (Nallapati et al., 2017), BERTSum (Liu and Lapata, 2019), Adapting BERTSum for Entity-Centric Summarization, Oracle - Lead3ent (salient), Oracle - Lead3ent (summary).|
+| Methodology  | 1. Constructing a graph representation of the radiology findings.|
+|              | 2. Training a contrastive learning model to identify the most important findings.|
+|              | 3. generating a summary based on the most important findings identified by the model.|
+| Architecture  | (Figure is given below) For each input findings, it is encoded by a text encoder, and a graph is constructed through its entities and dependency tree. Then, a graph encoder (e.g., graph neural networks (GNNs)) is adopted to model relation information in the constructed graph. Finally, to emphasize the key words in the findings, contrastive learning is introduced to map positive samples (constructed by masking non-key words) closer and push apart negative ones (constructed by masking key words). 
+
+They employed contrastive learning to assist the model in distinguishing between critical and secondary information, simultaneously improving sensitivity to important word representation by comparing positive and negative examples. 
+. |
 | Results  | - Methods that do not take entity information into account (Lead3ovr, GSumovr) perform significantly lower than the best methods in the same class which use entity information. |
 |          | - Previously introduced methods (ConvNet, CTRLSum) for controllable summarization can not perform well on entity-centric summarization. |
 |          | - Extractive approaches perform better than abstractive methods, which is expected due to the extractive nature of the ENTSUM data set. |
