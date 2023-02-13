@@ -13,9 +13,12 @@
 |             | -The approach is only as accurate as the graph representation of the findings, which may be limited by the quality of the data used to construct the graph. |
 | Reference  | ***Hu, J., Li, Z., Chen, Z., Li, Z., Wan, X., & Chang, T. H. (2022). Graph Enhanced Contrastive Learning for Radiology Findings Summarization. arXiv preprint arXiv:2204.00203..*** |
 
+#### Architecture
 ![Architecture](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/architecture.png)
 
+#### Result 1
 ![Result 1](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result1.png)
 
+#### Result 2
 ![Result2](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result2.png)
 
