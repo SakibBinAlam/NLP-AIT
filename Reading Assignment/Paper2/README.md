@@ -2,8 +2,7 @@
 
 | --- | --- |
 | Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary.|
-|                     
-|                     
+                    
 | Methods used for evaluation  | Abstractive methods: ConvNet (Fan et al. 2018), CTRLSum (He et al., 2020), GSum (Dou et al., 2021), Adapting GSum for Entity-Centric Summarization.|
 |                              | Extractive methods: Lead3ovr and Lead3ent (Nallapati et al., 2017), BERTSum (Liu and Lapata, 2019), Adapting BERTSum for Entity-Centric Summarization, Oracle - Lead3ent (salient), Oracle - Lead3ent (summary).|
 | Results  | - Methods that do not take entity information into account (Lead3ovr, GSumovr) perform significantly lower than the best methods in the same class which use entity information. |
