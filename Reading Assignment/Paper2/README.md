@@ -14,11 +14,11 @@
 | Reference  | ***Hu, J., Li, Z., Chen, Z., Li, Z., Wan, X., & Chang, T. H. (2022). Graph Enhanced Contrastive Learning for Radiology Findings Summarization. arXiv preprint arXiv:2204.00203..*** |
 
 #### Architecture
-![] (https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/architecture.png)
+![](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/architecture.png)
 
 #### Result 1
-(https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result1.png)
+![](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result1.png)
 
 #### Result 2
-(https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result2.png)
+![](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper2/result2.png)
 
