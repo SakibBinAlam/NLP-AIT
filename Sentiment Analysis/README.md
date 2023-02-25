@@ -3,7 +3,6 @@
 A web application using Flask was used for sentiment analysis for reddit posts.
 
 ## How to run
-- pip install -r requirements.txt
 - python app.py
 
 
