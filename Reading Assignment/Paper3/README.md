@@ -1,16 +1,9 @@
 ## 3. Latent Prompt Tuning for Text Summarization
-| Main Contributions  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
-during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
-| --- | --- |                  
-| Architecture  | (Figure is given below) For each input findings, it is encoded by a text encoder, and a graph is constructed through its entities and dependency tree. Then, a graph encoder (e.g., graph neural networks (GNNs)) is adopted to model relation information in the constructed graph. Finally, to emphasize the key words in the findings, contrastive learning is introduced to map positive samples (constructed by masking non-key words) closer and push apart negative ones (constructed by masking key words). They employed contrastive learning to assist the model in distinguishing between critical and secondary information, simultaneously improving        sensitivity to important word representation by comparing positive and negative examples. |
-| Results  | - Base + Graph + CL outperforms Base + Graph and Base + CL |
-|          | - While comparing with existing models the proposed model outperformed in every aspect. |
-|          | (Figures are attached below). |
-| Limitation  | -While doing human evaluation the model is less preferred for readability with a 10% gap. The main reason might be that many words removed in positive examples are used to keep sequence fluently, and our model tends to identify them as secondary information. |
-|             | -The approach is only as accurate as the graph representation of the findings, which may be limited by the quality of the data used to construct the graph. |
-
 | Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
 during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
+| Methodology  | 1. Constructing a graph representation of the radiology findings.|
+|              | 2. Training a contrastive learning model to identify the most important findings.|
+|              | 3. generating a summary based on the most important findings identified by the model.|
 | --- | --- |
 | Architecture  | (Figure is given below) The model achieves controllable summarization through prompts. During training time, the uncontrolled model learns a latent prompt from the controlled model using a contrastive learning objective. The model and the latent prompts are updated based on the loss. Finally the model can generate both controlled (e.g. summary with abstractiveness 60) and uncontrolled summarization (summary with abstractiveness).|
 | Results  | The authors evaluate the LOTUS method on four benchmark datasets: CNN/Daily Mail, XSum, Gigaword, and NYT. They compare their approach to several state-of-the-art models, including, BART, BERTSUM, T5, PEGASUS, and CTRLSUM. The results show that LOTUS outperforms these models on all four datasets. |
