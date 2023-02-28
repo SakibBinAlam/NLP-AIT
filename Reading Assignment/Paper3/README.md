@@ -1,4 +1,16 @@
 ## 1. Latent Prompt Tuning for Text Summarization
+| Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary. |
+| --- | --- |                  
+| Methodology  | 1. Constructing a graph representation of the radiology findings.|
+|              | 2. Training a contrastive learning model to identify the most important findings.|
+|              | 3. generating a summary based on the most important findings identified by the model.|
+| Architecture  | (Figure is given below) For each input findings, it is encoded by a text encoder, and a graph is constructed through its entities and dependency tree. Then, a graph encoder (e.g., graph neural networks (GNNs)) is adopted to model relation information in the constructed graph. Finally, to emphasize the key words in the findings, contrastive learning is introduced to map positive samples (constructed by masking non-key words) closer and push apart negative ones (constructed by masking key words). They employed contrastive learning to assist the model in distinguishing between critical and secondary information, simultaneously improving        sensitivity to important word representation by comparing positive and negative examples. |
+| Results  | - Base + Graph + CL outperforms Base + Graph and Base + CL |
+|          | - While comparing with existing models the proposed model outperformed in every aspect. |
+|          | (Figures are attached below). |
+| Limitation  | -While doing human evaluation the model is less preferred for readability with a 10% gap. The main reason might be that many words removed in positive examples are used to keep sequence fluently, and our model tends to identify them as secondary information. |
+|             | -The approach is only as accurate as the graph representation of the findings, which may be limited by the quality of the data used to construct the graph. |
+
 | Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
 during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |
@@ -6,6 +18,8 @@ during inference time. Therefore, they propose a Latent Prompt Tuning framework 
 | Results  | The authors evaluate the LOTUS method on four benchmark datasets: CNN/Daily Mail, XSum, Gigaword, and NYT. They compare their approach to several state-of-the-art models, including, BART, BERTSUM, T5, PEGASUS, and CTRLSUM. The results show that LOTUS outperforms these models on all four datasets. |
 | Future Work  | The proposed method could be extended to other text generation task such as machine translation, data-to-text generation and large generative language modeling. |
 | Reference  | ***Zhang, Y., Zhang, X., Wang, X., Chen, S. Q., & Wei, F. (2022). Latent Prompt Tuning for Text Summarization. arXiv preprint arXiv:2211.01837.*** |
+
+
 
 #### Architecture
 ![Architecture](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper3/architecture.png)
