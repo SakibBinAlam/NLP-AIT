@@ -1,5 +1,10 @@
 ## 3. Latent Prompt Tuning for Text Summarization
 
+| Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary. |
+| --- | --- |                  
+| Methodology  | 1. Constructing a graph representation of the radiology findings.|
+|              | 2. Training a contrastive learning model to identify the most important findings.|
+|              | 3. generating a summary based on the most important findings identified by the model.|
 | Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
 during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |
