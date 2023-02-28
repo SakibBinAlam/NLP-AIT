@@ -1,9 +1,7 @@
-## 1. Latent Prompt Tuning for Text Summarization
-| Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary. |
+## 3. Latent Prompt Tuning for Text Summarization
+| Main Contributions  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
+during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |                  
-| Methodology  | 1. Constructing a graph representation of the radiology findings.|
-|              | 2. Training a contrastive learning model to identify the most important findings.|
-|              | 3. generating a summary based on the most important findings identified by the model.|
 | Architecture  | (Figure is given below) For each input findings, it is encoded by a text encoder, and a graph is constructed through its entities and dependency tree. Then, a graph encoder (e.g., graph neural networks (GNNs)) is adopted to model relation information in the constructed graph. Finally, to emphasize the key words in the findings, contrastive learning is introduced to map positive samples (constructed by masking non-key words) closer and push apart negative ones (constructed by masking key words). They employed contrastive learning to assist the model in distinguishing between critical and secondary information, simultaneously improving        sensitivity to important word representation by comparing positive and negative examples. |
 | Results  | - Base + Graph + CL outperforms Base + Graph and Base + CL |
 |          | - While comparing with existing models the proposed model outperformed in every aspect. |
