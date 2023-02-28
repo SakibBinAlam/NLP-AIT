@@ -1,12 +1,11 @@
 ## 3. Latent Prompt Tuning for Text Summarization
 
-| Main Contributions  | The main contribution of the paper is the introduction of a graph-enhanced contrastive learning approach for radiology findings summarization. The approach uses a graph to represent the relationships between different findings, and contrastive learning to identify the most important findings and generate a summary. |
+| Main Contributions  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |                  
 | Methodology  | 1. Constructing a graph representation of the radiology findings.|
 |              | 2. Training a contrastive learning model to identify the most important findings.|
 |              | 3. generating a summary based on the most important findings identified by the model.|
-| Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
-during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
+| Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |                
 | Architecture  | (Figure is given below) The model achieves controllable summarization through prompts. During training time, the uncontrolled model learns a latent prompt from the controlled model using a contrastive learning objective. The model and the latent prompts are updated based on the loss. Finally the model can generate both controlled (e.g. summary with abstractiveness 60) and uncontrolled summarization (summary with abstractiveness).|
 | Results  | The authors evaluate the LOTUS method on four benchmark datasets: CNN/Daily Mail, XSum, Gigaword, and NYT. They compare their approach to several state-of-the-art models, including, BART, BERTSUM, T5, PEGASUS, and CTRLSUM. The results show that LOTUS outperforms these models on all four datasets. |
