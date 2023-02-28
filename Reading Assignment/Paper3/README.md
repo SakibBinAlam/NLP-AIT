@@ -1,5 +1,16 @@
 ## 1. Latent Prompt Tuning for Text Summarization
 
+| Main Contributions  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
+during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
+| --- | --- |                  
+| Architecture  | Figure is given below) The model achieves controllable summarization through prompts. During training time, the uncontrolled model learns a latent prompt from the controlled model using a contrastive learning objective. The model and the latent prompts are updated based on the loss. Finally the model can generate both controlled (e.g. summary with abstractiveness 60) and uncontrolled summarization (summary with abstractiveness). |
+| Results  | - Base + Graph + CL outperforms Base + Graph and Base + CL |
+
+| Limitation  | -While doing human evaluation the model is less preferred for readability with a 10% gap. The main reason might be that many words removed in positive examples are used to keep sequence fluently, and our model tends to identify them as secondary information. |
+|             | -The approach is only as accurate as the graph representation of the findings, which may be limited by the quality of the data used to construct the graph. |
+| Reference  | ***Hu, J., Li, Z., Chen, Z., Li, Z., Wan, X., & Chang, T. H. (2022). Graph Enhanced Contrastive Learning for Radiology Findings Summarization. arXiv preprint arXiv:2204.00203..*** |
+
+
 | Main Contribution  | The study firstly identifies the problem that control signals can help to improve the summarization quality, but they are usually unavailable
 during inference time. Therefore, they propose a Latent Prompt Tuning framework LOTUS (i.e., a single model with both “controlled” and “uncontrolled” modes) to solve this problem. |
 | --- | --- |
@@ -10,5 +21,3 @@ during inference time. Therefore, they propose a Latent Prompt Tuning framework 
 
 #### Architecture
 ![Architecture](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper3/architecture.png)
-
-
