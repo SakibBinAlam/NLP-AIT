@@ -12,6 +12,5 @@ during inference time. Therefore, they propose a Latent Prompt Tuning framework 
 | Reference  | ***Zhang, Y., Zhang, X., Wang, X., Chen, S. Q., & Wei, F. (2022). Latent Prompt Tuning for Text Summarization. arXiv preprint arXiv:2211.01837.*** |
 
 
-
 #### Architecture
 ![Architecture](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Reading%20Assignment/Paper3/architecture.png)
