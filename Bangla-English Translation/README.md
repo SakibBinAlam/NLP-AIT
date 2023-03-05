@@ -1,5 +1,5 @@
 # Machine Translation
-Translate Bangla to English (My model is extremely poor for suggestion :D Giving stupid output.
+Translate Bangla to English (My model is extremely poor. :D Giving stupid output)
 
 ## How to run
 - python app.py
