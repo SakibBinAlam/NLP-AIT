@@ -97,11 +97,11 @@ def translation(source, variants, save_path, device):
     output_max = output.argmax(1) #returns max indices
     mapping = vocab_transform[TRG_LANGUAGE].get_itos()
 
-    predict_setence = []
+    predict_sentence = []
     for token in output_max:
         if mapping[token.item()] == '<eos>':
-            return ' '.join(predict_setence)
+            return ' '.join(predict_sentence)
         
-        predict_setence.append(mapping[token.item()])
+        predict_sentence.append(mapping[token.item()])
 
-    return ' '.join(predict_setence)
+    return ' '.join(predict_sentence)
