@@ -60,37 +60,24 @@ class Attention(nn.Module):
         encoder_outputs = encoder_outputs.permute(1, 0, 2)
         #encoder_outputs = [batch size, src len, hid dim * 2]
 
-        if self.variants == 'additive': #work
-            #repeat decoder hidden state src_len times
+        if self.variants == 'additive':
             hidden = hidden.unsqueeze(1).repeat(1, src_len, 1)
-            #hidden = [batch size, src len, hid dim]
-            
             energy = torch.tanh(self.W(hidden) + self.U(encoder_outputs))
-            #energy = [batch size, src len, hid dim]
             
             attention = self.v(energy).squeeze(2)
-            #attention = [batch size, src len]
             
-        elif self.variants == 'general': #work
+        elif self.variants == 'general':
             hidden = hidden.unsqueeze(1).repeat(1, 1, 2)
-            #hidden = [batch size, 1, hid dim*2]
-            #encoder_outputs = [batch size, hid dim * 2, src len]
 
             energy = torch.bmm(hidden, encoder_outputs.transpose(1, 2))
             attention = energy.squeeze(1)
-            #attention = [batch size, src len]
 
         elif self.variants == 'multiplicative':
             wh = self.W(hidden).unsqueeze(1).repeat(1, 1, 2)
-            #wh = [batch size, 1, hid dim*2]
-            #encoder_outputs = [batch size, hid dim * 2, src len]
 
             energy = torch.bmm(wh, encoder_outputs.transpose(1, 2))
             attention = energy.squeeze(1)
-
-        #use masked_fill_ if you want in-place
         attention = attention.masked_fill(mask, -1e10)
-        #attention = [batch size, src len]
         return F.softmax(attention, dim = 1)
     
 class Decoder(nn.Module):
