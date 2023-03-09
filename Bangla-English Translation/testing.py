@@ -1,6 +1,5 @@
 import torch
 import pickle
-#from attacut import tokenize
 from model import *
 from torchtext.data.utils import get_tokenizer
 
