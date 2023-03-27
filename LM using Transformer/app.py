@@ -29,7 +29,7 @@ def autocomplete():
         name = form.name.data 
         code = predict(prompt = name, temperature=0.5)
         form.name.data = ""
-    return render_template("home.html",form=form,name =name, code=code)
+    return render_template("homepage.html",form=form,name =name, code=code)
 
 if __name__ == "__main__":
     app.run(debug=True)
