@@ -1,14 +1,16 @@
 import torch
 import pickle
-from LanguageModel import LSTMLanguageModel
+from Model import Decoder
 from torchtext.data.utils import get_tokenizer
 #Load GPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 tokenizer = get_tokenizer('spacy', language='en_core_web_md')
 
+UNK_IDX, PAD_IDX, SOS_IDX, EOS_IDX = 0, 1, 2, 3
+
 # Load necessary data
-vocab_path = "D:/AIT/NLP/Assignment/Assignment_6-Auto_Completion/objects/vocab.pkl"
+vocab_path = "D:/AIT/NLP/Assignment/Assignment_8/vocab.pkl"
 with open(vocab_path, 'rb') as handle:
     vocab = pickle.load(handle)
 print(len(vocab))
@@ -58,11 +60,12 @@ def predict(prompt, temperature=0.5):
     return ' '.join(generation)
 
 vocab_size = len(vocab)
-emb_dim = 1024                # 400 in the paper
-hid_dim = 1024                # 1150 in the paper
-num_layers = 2                # 3 in the paper
-dropout_rate = 0.65              
-lr = 1e-3                     
-model = LSTMLanguageModel(vocab_size, emb_dim, hid_dim, num_layers, dropout_rate).to(device)
-save_path = "D:/AIT/NLP/Assignment/Assignment_6-Auto_Completion/best-val-auto.pt"
+hid_dim    = 256                
+dec_layers = 3               
+dec_heads  = 8
+dec_pf_dim = 512
+dec_dropout = 0.1     
+lr = 1e-3                       
+model = Decoder(vocab_size, hid_dim, dec_layers, dec_heads, dec_pf_dim, dec_dropout, device, PAD_IDX).to(device)
+save_path = "D:/AIT/NLP/Assignment/Assignment_8/best-val-auto.pt"
 model.load_state_dict(torch.load((save_path), map_location=device))
