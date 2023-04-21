@@ -7,7 +7,7 @@ This is a language modeling task that works as a code generator. I used pretrain
 
 # Demo
 #### Home Page
-
+![Home Page](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Language%20Modeling%20(Hugging%20face)/home.png)
 
 #### Prediction
-
+![Output](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Language%20Modeling%20(Hugging%20face)/output.png)
