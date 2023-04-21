@@ -37,10 +37,10 @@ def autocomplete():
     print(form.validate_on_submit())
     if form.validate_on_submit():
         name = form.name.data 
-        pipe = pipeline("text-generation", max_length=100, pad_token_id=0, eos_token_id=0, model="aiman-lameesa/codeparrot-ds-accelerate", tokenizer=tokenizer)
+        pipe = pipeline("text-generation", max_length=100, pad_token_id=0, eos_token_id=0, model="SakibBinAlam/codeparrot-accelerate", tokenizer=tokenizer)
         code = pipe(name, num_return_sequences=50)[0]["generated_text"]
         form.name.data = ""
-    return render_template("homepage.html",form=form,name =name, code=code)
+    return render_template("home.html",form=form,name =name, code=code)
 
 if __name__ == "__main__":
     app.run(debug=True)
