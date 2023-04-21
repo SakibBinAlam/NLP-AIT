@@ -6,7 +6,7 @@ This is a language modeling task that works as a code generator. I used pretrain
 
 # Demo
 #### Home Page
-![Home Page](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Code%20Autocompletion/1.png)
 
-#### Auto Completion
-![Suggestion](https://github.com/SakibBinAlam/Natural-Language-Processing/blob/main/Code%20Autocompletion/2.png)
+
+#### Prediction
+
